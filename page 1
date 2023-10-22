@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>login</title>
+</head>
+<style>
+body {
+  background-image: url('https://www.techinexpert.com/wp-content/uploads/2020/09/s_1048899194_Airliner-flying_2880x1440.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+<marquee scroll amount="20" font size="8">WELCOME TO AIR HOST</font></marquee>
+    <center><h1>Online flight reservation</h1>
+    <form action="reservation_process.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br><br>
+
+        <label for="age">age:</label>
+        <input type="text" name="age" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br><br>
+
+        <label for="route">Select Route:</label>
+        <select name="route">
+            <option value="start point">start point</option>
+            <option value="end point">end point</option>
+            <!-- Add more route options as needed -->
+        </select><br><br>
+
+        <label for="date">Travel Date:</label>
+        <input type="date" name="date" required><br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" min="1" required><br><br>
+        
+<span class="pay"><a href="payment.html"> payment</a></span></center>
+
+    </form>
+</body>
+</html>
