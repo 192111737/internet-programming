@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seat Selection</title>
+</head>
+<body>
+    <h2>Seat Selection</h2>
+    <form action="process_seat_selection.php" method="post">
+        <p>Select your seat(s):</p>
+        <table border="1">
+            <tr>
+                <td></td>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+            <?php
+            // Assume a 5x5 seat map for this example
+            for ($row = 1; $row <= 5; $row++) {
+                echo '<tr>';
+                echo '<td>Row ' . $row . '</td>';
+                for ($col = 'A'; $col <= 'C'; $col++) {
+                    echo '<td>';
+                    $seat_name = $row . $col;
+                    echo '<label for="' . $seat_name . '">';
+                    echo '<input type="checkbox" id="' . $seat_name . '" name="selected_seats[]" value="' . $seat_name . '">';
+                    echo $seat_name;
+                    echo '</label>';
+                    echo '</td>';
+                }
+                echo '</tr>';
+            }
+            ?>
+        </table>
+        <input type="submit" value="Confirm Selection">
+    </form>
+</body>
+</html>
